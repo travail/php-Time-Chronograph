@@ -63,7 +63,7 @@ Returns the time between the mark `$start` and `$end` in given decimal place, mi
 
 #### Description
 
-`float diff($start, $end, [$digit = 3])`
+`float diff(string $start, strig $end [, int $digit = 3])`
 
 Returns the time between the mark `$start` and `$end` in given decimal place, millisecond by default.
 
