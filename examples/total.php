@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(dirname(__FILE__)) . '/Time/Chronograph.php';
+require_once dirname(dirname(__FILE__)) . '/lib/Time/Chronograph.php';
 
 main();
 exit;
