@@ -53,7 +53,7 @@ Returns the result of `gettimeofday`.
 
 `float total([int $digit = 3])`
 
-Returns the time between the mark `$start` and `$end` in given decimal place, millisecond by default.
+Returns the time between the mark `$start` and `$end` in given decimal place, 3 (millisecond) by default.
 
 #### Parameters
 
@@ -72,3 +72,11 @@ Returns the time between the mark `$start` and `$end` in given decimal place, mi
 * $start
 * $end
 * $digit
+
+### AUTHOR
+
+travail
+
+### LICENSE
+
+This library is free software. You can redistribute it and/or modify it under the same terms as PHP itself.
