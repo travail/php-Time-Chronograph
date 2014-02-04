@@ -31,15 +31,20 @@ class Chronograph
 
     public function total($digit = self::DEFAULT_DECIMAL_PLACE)
     {
-        if (!$this->mark[self::MARK_STOP]);
+        // Return null if not started
+        if (!isset($this->mark[self::MARK_START])) return null;
+        // Stop if not stopped yet
+        if (!isset($this->mark[self::MARK_STOP])) $this->stop();
         return $this->diff(self::MARK_START, self::MARK_STOP, $digit);
     }
 
-    public function diff($start, $stop, $digit = self::DEFAULT_DECIMAL_PLACE)
+    public function diff($s, $e, $digit = self::DEFAULT_DECIMAL_PLACE)
     {
-        if (!$start || !$stop) return null;
-        $t0     = $this->mark[$start];
-        $t1     = $this->mark[$stop];
+        if (!$s || !$e) return null;
+        if (!isset($this->mark[$s]) || !isset($this->mark[$e])) return null;
+
+        $t0     = $this->mark[$s];
+        $t1     = $this->mark[$e];
         $format = sprintf('%%.%df', $digit);
 
         return floatval(sprintf($format, $t1 - $t0));
