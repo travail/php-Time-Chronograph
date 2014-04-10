@@ -1,0 +1,11 @@
+{
+  "name": "travail/time-chronograph",
+  "description": "travail/time-chronograph",
+  "license": "PHP-3.0",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Time\\": "lib"
+    }
+  }
+}
