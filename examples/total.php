@@ -1,5 +1,7 @@
 <?php
 
+use \Time\Chronograph;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 main();
@@ -8,7 +10,7 @@ exit;
 function main()
 {
     $sleep  = rand(1000000, 3000000);
-    $chrono = new \Time\Chronograph();
+    $chrono = new Chronograph();
     $chrono->start();
 
     echo "Sleep $sleep micor seconds\n";
