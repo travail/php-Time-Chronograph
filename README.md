@@ -7,18 +7,47 @@
 ## SYNOPSIS
 
 ```php
-require_once 'path/to/Time/Chronograph.php';
 
-$chrono = new \Time\Chronograph();
+use \Time\Chronograph;
+
+require_once '/path/to/vendor/autoload.php';
+
+$chrono = new Chronograph();
 $chrono->start();
 
+$chrono->mark('before_do_something');
 /* Do something */
+$chrono->mark('after_do_something');
 
 $chrono->stop();
+
+$diff = $chrono->diff('before_do_something', 'after_do_somthing');
+echo sprintf("Took %.3f to do something", $diff);
+
 $total = $chrono->total();
 echo sprintf("Took %.3f seconds\n", $total);
 $total_in_micro_seconds = $chrono->total(6);
 echo sprintf("Took %.6f seconds\n", $total_in_micro_seconds);
+```
+
+## INSTALLATION
+To install this package into your project via composer, add the following snippet to your `composer.json`. Then run `composer install`.
+
+```
+"require": {
+    "travail/time-chronograph": "dev-master"
+}
+```
+
+If you want to install from gihub, add the following:
+
+```
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:travail/php-Time-Chronograph.git"
+    }
+]
 ```
 
 ## METHODS
