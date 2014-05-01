@@ -5,6 +5,11 @@ namespace Time;
 class Chronograph
 {
     /**
+     * @var string The version of this package
+     */
+    const VERSION = '0.1.0';
+
+    /**
      * @var int The default decimal place
      */
     const DEFAULT_DECIMAL_PLACE = 3;
