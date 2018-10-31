@@ -21,7 +21,7 @@ $chrono->mark('after_do_something');
 
 $chrono->stop();
 
-$diff = $chrono->diff('before_do_something', 'after_do_somthing');
+$diff = $chrono->diff('before_do_something', 'after_do_something');
 echo sprintf("Took %.3f to do something", $diff);
 
 $total = $chrono->total();
